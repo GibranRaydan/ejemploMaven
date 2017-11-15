@@ -19,8 +19,9 @@ public class Activo {
     private String estado;
     private String prestado;
     private int calificacion;
+    private String categoria;
 
-    public Activo(int id_activo, String tipo, String fabricante, String fecha_compra, String ultimo_mantenimiento, String estado, String prestado, int calificacion) {
+    public Activo(int id_activo, String tipo, String fabricante, String fecha_compra, String ultimo_mantenimiento, String estado, String prestado, int calificacion, String categoria) {
         this.id_activo = id_activo;
         this.tipo = tipo;
         this.fabricante = fabricante;
@@ -29,6 +30,15 @@ public class Activo {
         this.estado = estado;
         this.prestado = prestado;
         this.calificacion = calificacion;
+        this.categoria = categoria;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 
     public int getId_activo() {
