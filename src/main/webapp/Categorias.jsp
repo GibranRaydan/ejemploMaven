@@ -73,8 +73,8 @@
                                 <th>Prestado</th>
                                 <th>Calificacion</th>
                             </tr>
-                            <% if (request.getAttribute("listaActivos") != null) {
-                                    ArrayList<Activo> list = (ArrayList<Activo>) request.getAttribute("listaActivos");
+                            <% if (request.getAttribute("listaCategorias") != null) {
+                                    ArrayList<Activo> list = (ArrayList<Activo>) request.getAttribute("listaCategorias");
                                     if (list != null)
                                         for (Activo activo : list) {
 
