@@ -52,7 +52,7 @@
                 <div class="col-sm-2 sidenav">
                 </div>
                 <div class="col-sm-8 text-left"> 
-                    <h1>Activos</h1>
+                    <h1>Categorias</h1>
                     <div class="span12">&nbsp;</div>
                     <button onclick="window.location.href = 'AnadirActivo.jsp'" type="button" type="button" class="btn-sm btn-success">Añadir Activo</button>
                     <button onclick="window.location.href = 'EliminarActivo?action=delete'" type="button" type="button" class="btn-sm btn-danger">Eliminar Activo</button>
@@ -64,35 +64,24 @@
                     <div class="container">           
                         <table class="table table-striped">
                             <tr>
-                                <th>ID Activo</th>
-                                <th>Tipo</th>
-                                <th>Fabricante</th>
-                                <th>Fecha compra</th>
-                                <th>Ultimo Mant.</th>
-                                <th>Estado</th>
-                                <th>Prestado</th>
-                                <th>Calificacion</th>
+                                <th>ID Categoria</th>
+                                <th>Nombre</th>
+                                <th>Ubicacion</th>
+                              
                             </tr>
                             <% if (request.getAttribute("listaCategorias") != null) {
-                                    ArrayList<Activo> list = (ArrayList<Activo>) request.getAttribute("listaCategorias");
+                                    ArrayList<Categoria> list = (ArrayList<Categoria>) request.getAttribute("listaCategorias");
                                     if (list != null)
-                                        for (Activo activo : list) {
+                                        for (Categoria categoria : list) {
 
 
                             %>
                             <tr>
-                                <td><%=activo.getId_activo()%></td>
-                                <td><%=activo.getTipo()%></td>
-                                <td><%=activo.getFabricante()%></td>
-                                <td><%=activo.getFecha_compra()%></td>
-                                <td><%=activo.getUltimo_mantenimiento()%></td>
-                                <td><%=activo.getEstado()%></td>
-                                <td><%=activo.getPrestado()%></td>
-                                <td><%=activo.getCalificacion()%></td>
-
-                                <td>
-                                    <button onclick="window.location.href = 'EditarActivos?id_activo=<%=activo.getId_activo()%>&tipo=<%=activo.getTipo()%>&fabricante=<%=activo.getFabricante()%>&fecha_compra=<%=activo.getFecha_compra()%>&ultimo_mantenimiento=<%=activo.getUltimo_mantenimiento()%>&estado=<%=activo.getEstado()%>&prestado=<%=activo.getPrestado()%>&calificacion=<%=activo.getCalificacion()%>'" class="btn btn-info">Editar</button>
-                                </td>
+                                <td><%=categoria.geiID()%></td>
+                                <td><%=categoria.getNombre()%></td>
+                                <td><%=Categoria.getUbicacion()%></td>
+                                
+                                
                             </tr>
                             <% }
                                 }
