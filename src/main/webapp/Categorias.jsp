@@ -1,9 +1,9 @@
-<%@page import="Model.Activo"%>
+<%@page import="Model.Categoria"%>
 <%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Activos</title>
+        <title>Categorias</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -55,8 +55,7 @@
                     <h1>Categorias</h1>
                     <div class="span12">&nbsp;</div>
                     <button onclick="window.location.href = 'AnadirActivo.jsp'" type="button" type="button" class="btn-sm btn-success">Añadir Activo</button>
-                    <button onclick="window.location.href = 'EliminarActivo?action=delete'" type="button" type="button" class="btn-sm btn-danger">Eliminar Activo</button>
-                    <button onclick="window.location.href = 'BuscarActivo.jsp'" type="button" type="button" class="btn-sm btn-warning">Buscar Activo</button>
+                   
                     <div class="span12">&nbsp;</div>
 
 
@@ -77,7 +76,7 @@
 
                             %>
                             <tr>
-                                <td><%=categoria.geiID()%></td>
+                                <td><%=categoria.geiId()%></td>
                                 <td><%=categoria.getNombre()%></td>
                                 <td><%=Categoria.getUbicacion()%></td>
                                 
