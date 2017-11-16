@@ -101,12 +101,12 @@
     
     
     <servlet>
-        <servlet-name>Categorias</servlet-name>
-        <servlet-class>Categorias</servlet-class>
+        <servlet-name>Categoriaa</servlet-name>
+        <servlet-class>Categoriaa</servlet-class>
     </servlet>
         <servlet-mapping>
-        <servlet-name>Categorias</servlet-name>
-        <url-pattern>/Categorias</url-pattern>
+        <servlet-name>Categoriaa</servlet-name>
+        <url-pattern>/Categoriaa</url-pattern>
     </servlet-mapping>
     
     
