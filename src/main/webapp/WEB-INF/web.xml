@@ -96,10 +96,30 @@
         <servlet-name>Auxiliarr</servlet-name>
         <url-pattern>/Auxiliarr</url-pattern>
     </servlet-mapping>
+    
+    
+    
+    
     <servlet>
         <servlet-name>Categorias</servlet-name>
-        <servlet-class>Controller.Categorias</servlet-class>
+        <servlet-class>Categorias</servlet-class>
     </servlet>
+        <servlet-mapping>
+        <servlet-name>Categorias</servlet-name>
+        <url-pattern>/Categorias</url-pattern>
+    </servlet-mapping>
+    
+    
+      <servlet>
+        <servlet-name>Header</servlet-name>
+        <servlet-class>Header</servlet-class>
+    </servlet>
+        <servlet-mapping>
+        <servlet-name>Header</servlet-name>
+        <url-pattern>/Header</url-pattern>
+    </servlet-mapping>
+    
+    
     
     <servlet-mapping>
         <servlet-name>BuscarAuxiliares</servlet-name>
