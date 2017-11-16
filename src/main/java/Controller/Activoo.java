@@ -77,9 +77,10 @@ public class Activoo extends HttpServlet {
             String estado = (String) request.getParameter("estado");
             String prestado = (String) request.getParameter("prestado");
             int calificacion = Integer.parseInt(request.getParameter("calificacion"));
+            String categoria = (String) request.getParameter("categoria");
 
             ActivoDAO dao = new ActivoDAO();
-            Activo tab = new Activo(id_activo, tipo, fabricante, fecha_compra, mantenimiento, estado, prestado, calificacion);
+            Activo tab = new Activo(id_activo, tipo, fabricante, fecha_compra, mantenimiento, estado, prestado, calificacion,categoria);
 
             dao.addActivo(tab);
 

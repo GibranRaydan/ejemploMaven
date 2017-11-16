@@ -98,9 +98,10 @@ public class EditarActivos extends HttpServlet {
             String estado = (String) request.getParameter("estado");
             String prestado = (String) request.getParameter("prestado");
             int calificacion = Integer.parseInt(request.getParameter("calificacion"));
+            String categoria = (String) request.getParameter("categoria");
 
             ActivoDAO dao = new ActivoDAO();
-            dao.updateActivo(idActivo, tipo, fabricante, fechaC, mantenimiento, estado, prestado, calificacion);
+            dao.updateActivo(idActivo, tipo, fabricante, fechaC, mantenimiento, estado, prestado, calificacion,categoria);
 
         } catch (SQLException ex) {
             Logger.getLogger(EditarActivos.class.getName()).log(Level.SEVERE, null, ex);

@@ -5,6 +5,13 @@
  */
 package DAO;
 
+import Model.Categoria;
+import Util.DbUtil;
+import java.net.URISyntaxException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 /**
  *
  * @author LabingXEON
@@ -31,6 +38,9 @@ public class CategoriaDAO {
             result = preparedStmt.execute();
         } catch (SQLException e) {
             e.printStackTrace();
+          
+                   
+                              
         }
         return result;
     }

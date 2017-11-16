@@ -44,7 +44,7 @@ public class ActivoDAO {
             preparedStmt.setString(6, activo.getEstado());
             preparedStmt.setString(7, activo.getPrestado());
             preparedStmt.setInt(8, activo.getCalificacion());
-            preparedStmt.setString(9, activo.categoria);
+            preparedStmt.setString(9, activo.getCategoria());
             result = preparedStmt.execute();
         } catch (SQLException e) {
             e.printStackTrace();
