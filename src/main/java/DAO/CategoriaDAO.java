@@ -10,7 +10,10 @@ import Util.DbUtil;
 import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 /**
  *
@@ -44,5 +47,56 @@ public class CategoriaDAO {
         }
         return result;
     }
+      
+      public ArrayList<Categoria> getAllCategoria() throws SQLException, URISyntaxException {
+        ArrayList<Categoria> categorias = null;
+        boolean result = false;
+        String query = "SELECT * FROM categoria";
+        Connection connection = DbUtil.getConnection();
+        try {
+
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery(query);
+
+            int id_categoria = 0;
+            String nombre = null;
+            String ubicacion = null;
+         
+            while (rs.next()) {
+                if (categorias == null) {
+                    categorias = new ArrayList<Categoria>();
+                }
+                Categoria registro = new Categoria(id_categoria,nombre,ubicacion);
+                id_categoria = rs.getInt("id_categoria");
+                registro.setId(id_categoria);
+
+                nombre = rs.getString("nombre");
+                registro.setNombre(nombre);
+
+                ubicacion = rs.getString("ubicacion");
+                registro.setUbicacion(ubicacion);
+
+               
+
+
+                categorias.add(registro);
+
+            }
+            if (categorias != null) {
+                for (int i = 0; i < categorias.size(); i++) {
+                    System.out.println(categorias.get(i).getId() + " " + categorias.get(i).getNombre() + " " + categorias.get(i).getUbicacion());
+                }
+            }
+            st.close();
+
+        } catch (SQLException e) {
+            System.out.println("Problemas al obtener la lista de Categorias");
+            e.printStackTrace();
+        }
+
+        return categorias;
+
+    }
+
     
 }
