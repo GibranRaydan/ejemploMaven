@@ -78,7 +78,7 @@
                             <tr>
                                 <td><%=categoria.getId()%></td>
                                 <td><%=categoria.getNombre()%></td>
-                                <td><%=Categoria.getUbicacion()%></td>
+                                <td><%=categoria.getUbicacion()%></td>
                                 
                                 
                             </tr>
