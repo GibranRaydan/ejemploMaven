@@ -68,6 +68,7 @@
                             String estado = (String) request.getAttribute("estado");
                             String prestado = (String) request.getAttribute("prestado");
                             int calificacion = (Integer) request.getAttribute("calificacion");
+                            String categoria = (String) request.getAttribute("categoria");
 
                         %>
                         <form class="form-inline" action="EditarActivos" method="POST">
