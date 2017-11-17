@@ -117,7 +117,7 @@ public class ActivoDAO {
                 registro.setCalificacion(calificacion);
                 
                 categoria = rs.getString("categoria");
-                registro.setPrestado(categoria);
+                registro.setCategoria(categoria);
 
 
                 activo.add(registro);
@@ -188,7 +188,7 @@ public class ActivoDAO {
                 registro.setCalificacion(calificacion);
                 
                 categoria = rs.getString("categoria");
-                registro.setPrestado(categoria);
+                registro.setCategoria(categoria);
 
                 activo.add(registro);
 
@@ -224,7 +224,7 @@ public class ActivoDAO {
             preparedStmt.setString(5, estado);
             preparedStmt.setString(6, prestado);
             preparedStmt.setInt(7, calificacion);
-              preparedStmt.setString(7, categoria);
+              preparedStmt.setString(8, categoria);
 
             if (preparedStmt.executeUpdate() > 0) {
                 result = true;
