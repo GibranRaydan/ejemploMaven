@@ -48,6 +48,22 @@ public class CategoriaDAO {
         return result;
     }
       
+       public boolean deleteCategoria(int a) throws SQLException, URISyntaxException {
+        boolean result = false;
+        Connection connection = DbUtil.getConnection();
+        String query = "delete from categoria  where id_categoria= ?";
+        PreparedStatement preparedStmt = null;
+        try {
+            preparedStmt = connection.prepareStatement(query);
+            preparedStmt.setInt(1, a);
+            result = preparedStmt.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return result;
+    }
+      
       public ArrayList<Categoria> getAllCategoria() throws SQLException, URISyntaxException {
         ArrayList<Categoria> categorias = null;
         boolean result = false;

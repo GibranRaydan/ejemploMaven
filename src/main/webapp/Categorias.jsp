@@ -28,7 +28,7 @@
 
             /* Set black background color, white text and some padding */
             footer {
-                position: relative;
+            
                 background-color: #555;
                 color: white;
                 padding: 15px;
@@ -80,8 +80,10 @@
                                 <td><%=categoria.getId()%></td>
                                 <td><%=categoria.getNombre()%></td>
                                 <td><%=categoria.getUbicacion()%></td>
-                                
-                                
+                               
+                                <td>
+                                    <button onclick="window.location.href = 'EliminarCategoriaa?id_categoria=<%=categoria.getId()%>'" class="btn btn-info">Eliminar</button>
+                                </td>
                             </tr>
                             <% }
                                 }
