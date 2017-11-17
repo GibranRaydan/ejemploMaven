@@ -28,6 +28,7 @@
 
             /* Set black background color, white text and some padding */
             footer {
+                position: relative;
                 background-color: #555;
                 color: white;
                 padding: 15px;
@@ -54,7 +55,7 @@
                 <div class="col-sm-8 text-left"> 
                     <h1>Categorias</h1>
                     <div class="span12">&nbsp;</div>
-                    <button onclick="window.location.href = 'AnadirCategoria.jsp'" type="button" type="button" class="btn-sm btn-success">Añadir Activo</button>
+                    <button onclick="window.location.href = 'AnadirCategoria.jsp'" type="button" type="button" class="btn-sm btn-success">Añadir Categoria</button>
                    
                     <div class="span12">&nbsp;</div>
 

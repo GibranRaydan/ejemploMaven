@@ -30,7 +30,7 @@ public class CategoriaDAO {
       public boolean addCategoria(Categoria categoria) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
-        String query = "insert into categoria (id,nombre,ubicacion) values (?,?,?);";
+        String query = "insert into categoria (id_categoria,nombre,ubicacion) values (?,?,?);";
         PreparedStatement preparedStmt = null;
         try {
             preparedStmt = connection.prepareStatement(query);
