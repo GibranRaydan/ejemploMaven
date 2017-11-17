@@ -1,9 +1,7 @@
-<%@page import="Model.Categoria"%>
-<%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Categorias</title>
+        <title>Añadir Categoria</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -50,45 +48,33 @@
         <div class="container-fluid text-center">    
             <div class="row content">
                 <div class="col-sm-2 sidenav">
+
                 </div>
                 <div class="col-sm-8 text-left"> 
-                    <h1>Categorias</h1>
-                    <div class="span12">&nbsp;</div>
-                    <button onclick="window.location.href = 'AnadirCategoria.jsp'" type="button" type="button" class="btn-sm btn-success">Añadir Activo</button>
-                   
-                    <div class="span12">&nbsp;</div>
-
-
-
-                    <div class="container">           
-                        <table class="table table-striped">
-                            <tr>
-                                <th>ID Categoria</th>
-                                <th>Nombre</th>
-                                <th>Ubicacion</th>
-                              
-                            </tr>
-                            <% if (request.getAttribute("listaCategorias") != null) {
-                                    ArrayList<Categoria> list = (ArrayList<Categoria>) request.getAttribute("listaCategorias");
-                                    if (list != null)
-                                        for (Categoria categoria : list) {
-
-
-                            %>
-                            <tr>
-                                <td><%=categoria.getId()%></td>
-                                <td><%=categoria.getNombre()%></td>
-                                <td><%=categoria.getUbicacion()%></td>
-                                
-                                
-                            </tr>
-                            <% }
-                                }
-                            %>
-                        </table>
-                    </div>
+                    <h1>Añadir Categoria</h1>
+                    <p></p>
                     <hr>
+                    <div class="container">   
+                        <form class="form-inline" action="Categoriaa" method="POST">
+                            <div class="form-group">
+                                <label for="idCategoria">ID Categoria:</label>
+                                <input  class="form-control" name="idCategoria">
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input  class="form-control" name="nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="ubicacion">Ubicacion:</label>
+                                <input  class="form-control" name="ubicacion">
+                            </div>
+                           
 
+                            <br>
+                            <div class="span12">&nbsp;</div>
+                            <button type="submit" class="btn btn-default" name="Enviar">Enviar</button>
+                        </form>
+                    </div>
                 </div>
 
             </div>
