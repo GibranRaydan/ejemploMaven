@@ -72,6 +72,7 @@
                                 <th>Estado</th>
                                 <th>Prestado</th>
                                 <th>Calificacion</th>
+                                <th>Categoria</th>
                             </tr>
                             <% if (request.getAttribute("listaActivos") != null) {
                                     ArrayList<Activo> list = (ArrayList<Activo>) request.getAttribute("listaActivos");
@@ -89,9 +90,10 @@
                                 <td><%=activo.getEstado()%></td>
                                 <td><%=activo.getPrestado()%></td>
                                 <td><%=activo.getCalificacion()%></td>
+                                <td><%=activo.getCategoria()%></td>
 
                                 <td>
-                                    <button onclick="window.location.href = 'EditarActivos?id_activo=<%=activo.getId_activo()%>&tipo=<%=activo.getTipo()%>&fabricante=<%=activo.getFabricante()%>&fecha_compra=<%=activo.getFecha_compra()%>&ultimo_mantenimiento=<%=activo.getUltimo_mantenimiento()%>&estado=<%=activo.getEstado()%>&prestado=<%=activo.getPrestado()%>&calificacion=<%=activo.getCalificacion()%>'" class="btn btn-info">Editar</button>
+                                    <button onclick="window.location.href = 'EditarActivos?id_activo=<%=activo.getId_activo()%>&tipo=<%=activo.getTipo()%>&fabricante=<%=activo.getFabricante()%>&fecha_compra=<%=activo.getFecha_compra()%>&ultimo_mantenimiento=<%=activo.getUltimo_mantenimiento()%>&estado=<%=activo.getEstado()%>&prestado=<%=activo.getPrestado()%>&calificacion=<%=activo.getCalificacion()%>&categoria=<%=activo.getCategoria()%>'" class="btn btn-info">Editar</button>
                                 </td>
                             </tr>
                             <% }
