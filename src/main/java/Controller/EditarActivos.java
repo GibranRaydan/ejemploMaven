@@ -59,7 +59,7 @@ public class EditarActivos extends HttpServlet {
           
             //String calificacion = request.getParameter("calificacion");
             int calificacion = Integer.parseInt(request.getParameter("calificacion"));
-            String categoria = request.getParameter("categoria");
+            String categoria = (String) request.getParameter("categoria");
 
             request.setAttribute("id_activo", id_activo);
             request.setAttribute("tipo", tipo);
