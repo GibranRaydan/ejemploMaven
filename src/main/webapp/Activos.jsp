@@ -54,7 +54,7 @@
                 <div class="col-sm-8 text-left"> 
                     <h1>Activos</h1>
                     <div class="span12">&nbsp;</div>
-                    <button onclick="window.location.href = 'ActivoCategoriaa'" type="button" type="button" class="btn-sm btn-success">Añadir Activo</button>
+                    <button onclick="window.location.href = 'ActivoCategoriaa?action=categoria'" type="button" type="button" class="btn-sm btn-success">Añadir Activo</button>
                     <button onclick="window.location.href = 'EliminarActivo?action=delete'" type="button" type="button" class="btn-sm btn-danger">Eliminar Activo</button>
                     <button onclick="window.location.href = 'BuscarActivo.jsp'" type="button" type="button" class="btn-sm btn-warning">Buscar Activo</button>
                     <div class="span12">&nbsp;</div>

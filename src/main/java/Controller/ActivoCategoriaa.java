@@ -48,13 +48,7 @@ public class ActivoCategoriaa extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
+        
         ArrayList categoria = new ArrayList(); //posible error
         try {
             CategoriaDAO a = new CategoriaDAO();
@@ -68,6 +62,13 @@ public class ActivoCategoriaa extends HttpServlet {
         } catch (URISyntaxException ex) {
             Logger.getLogger(ActivoCategoriaa.class.getName()).log(Level.SEVERE, null, ex);
         }
+
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
     }
 
     @Override
