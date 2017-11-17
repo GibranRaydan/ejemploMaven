@@ -1,4 +1,8 @@
+<%@page import="Model.Categoria"%>
+<%@page import="java.util.ArrayList"%>
+
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
         <title>Editar Activo</title>
