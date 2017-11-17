@@ -112,7 +112,7 @@
                                     
                                      <div class="form-group">
                                 <label for="categoria">Categoria:</label>
-                                <input  class="form-control" name="mantenimiento" value="<%=categoria%>">
+                                <input  class="form-control" name="categoria" value="<%=categoria%>">
                             </div>
                                 <br>
                                 <br>
