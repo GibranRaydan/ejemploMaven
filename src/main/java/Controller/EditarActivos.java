@@ -68,8 +68,9 @@ public class EditarActivos extends HttpServlet {
             request.setAttribute("ultimo_mantenimiento", ultimo_mantenimiento);
             request.setAttribute("estado", estado);
             request.setAttribute("prestado", prestado);
-            request.setAttribute("calificacion", calificacion);
             request.setAttribute("categoria", categoria);
+            request.setAttribute("calificacion", calificacion);
+            
 
             request.getRequestDispatcher("EditarActivo.jsp").forward(request, response);
 
@@ -104,7 +105,7 @@ public class EditarActivos extends HttpServlet {
             String categoria = (String) request.getParameter("categoria");
 
             ActivoDAO dao = new ActivoDAO();
-            dao.updateActivo(idActivo, tipo, fabricante, fechaC, mantenimiento, estado, prestado, calificacion,categoria);
+            dao.updateActivo(idActivo, tipo, fabricante, fechaC, mantenimiento, estado, prestado, calificacion, categoria);
 
         } catch (SQLException ex) {
             Logger.getLogger(EditarActivos.class.getName()).log(Level.SEVERE, null, ex);

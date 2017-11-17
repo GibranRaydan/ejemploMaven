@@ -91,7 +91,7 @@ public class ActivoDAO {
                 if (activo == null) {
                     activo = new ArrayList<Activo>();
                 }
-                Activo registro = new Activo(id, tipo, fabricante, fecha_compra, ultimo_mantenimiento, estado, prestado, calificacion,categoria);
+                Activo registro = new Activo(id, tipo, fabricante, fecha_compra, ultimo_mantenimiento, estado, prestado, calificacion, categoria);
                 id = rs.getInt("id_activo");
                 registro.setId_activo(id);
 
@@ -112,13 +112,12 @@ public class ActivoDAO {
 
                 prestado = rs.getString("prestado");
                 registro.setPrestado(prestado);
-
-                calificacion = rs.getInt("calificacion");
-                registro.setCalificacion(calificacion);
                 
                 categoria = rs.getString("categoria");
                 registro.setCategoria(categoria);
-
+                
+                calificacion = rs.getInt("calificacion");
+                registro.setCalificacion(calificacion);
 
                 activo.add(registro);
 
@@ -162,7 +161,7 @@ public class ActivoDAO {
                 if (activo == null) {
                     activo = new ArrayList<Activo>();
                 }
-                Activo registro = new Activo(id, tipo, fabricante, fecha_compra, ultimo_mantenimiento, estado, prestado, calificacion,categoria);
+                Activo registro = new Activo(id, tipo, fabricante, fecha_compra, ultimo_mantenimiento, estado, prestado, calificacion, categoria);
                 id = rs.getInt("id_activo");
                 registro.setId_activo(id);
 
@@ -186,7 +185,7 @@ public class ActivoDAO {
 
                 calificacion = rs.getInt("calificacion");
                 registro.setCalificacion(calificacion);
-                
+
                 categoria = rs.getString("categoria");
                 registro.setCategoria(categoria);
 
@@ -225,7 +224,6 @@ public class ActivoDAO {
             preparedStmt.setString(6, prestado);
             preparedStmt.setString(7, categoria);
             preparedStmt.setInt(8, calificacion);
-            
 
             if (preparedStmt.executeUpdate() > 0) {
                 result = true;
