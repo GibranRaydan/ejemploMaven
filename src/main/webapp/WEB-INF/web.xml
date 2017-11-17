@@ -109,6 +109,16 @@
         <url-pattern>/Categoriaa</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>ActivoCategoriaa</servlet-name>
+        <servlet-class>Controller.ActivoCategoriaa</servlet-class>
+    </servlet>
+        <servlet-mapping>
+        <servlet-name>ActivoCategoriaa</servlet-name>
+        <url-pattern>/ActivoCategoriaa</url-pattern>
+    </servlet-mapping>
+    
+    
      <servlet>
         <servlet-name>EliminarCategoriaa</servlet-name>
         <servlet-class>Controller.EliminarCategoriaa</servlet-class>
