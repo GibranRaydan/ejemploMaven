@@ -48,7 +48,18 @@ public class EliminarCategoriaa extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
+        int idA = Integer.parseInt(request.getParameter("id_categoria"));
+        
+        try {
+            CategoriaDAO a = new CategoriaDAO();
+            a.deleteCategoria(idA);
+        } catch (SQLException ex) {
+            Logger.getLogger(EliminarCategoriaa.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(EliminarCategoriaa.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        response.sendRedirect("Categoriaa");
 
     }
 
@@ -63,18 +74,7 @@ public class EliminarCategoriaa extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        int idA = Integer.parseInt(request.getParameter("id_categoria"));
-        
-        try {
-            CategoriaDAO a = new CategoriaDAO();
-            a.deleteCategoria(idA);
-        } catch (SQLException ex) {
-            Logger.getLogger(EliminarCategoriaa.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (URISyntaxException ex) {
-            Logger.getLogger(EliminarCategoriaa.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        response.sendRedirect("Categoriaa");
+       
     }
 
     /**
