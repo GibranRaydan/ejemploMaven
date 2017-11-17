@@ -212,7 +212,7 @@ public class ActivoDAO {
     public boolean updateActivo(int a, String tipo, String fabricante, String fecha_compra, String ultimo_mantenimiento, String estado, String prestado, int calificacion, String categoria) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
-        String query = "update activo set tipo = ?, fabricante = ?, fecha_compra = ?, ultimo_mantenimiento = ?, estado = ?, prestado = ?, calificacion = ?, categoria = ? where id_activo = " + a;
+        String query = "update activo set tipo = ?, fabricante = ?, fecha_compra = ?, ultimo_mantenimiento = ?, estado = ?, prestado = ?, categoria = ?, calificacion = ? where id_activo = " + a;
         PreparedStatement preparedStmt = null;
 
         try {
@@ -223,8 +223,9 @@ public class ActivoDAO {
             preparedStmt.setString(4, ultimo_mantenimiento);
             preparedStmt.setString(5, estado);
             preparedStmt.setString(6, prestado);
-            preparedStmt.setInt(7, calificacion);
-            preparedStmt.setString(8, categoria);
+            preparedStmt.setString(7, categoria);
+            preparedStmt.setInt(8, calificacion);
+            
 
             if (preparedStmt.executeUpdate() > 0) {
                 result = true;
