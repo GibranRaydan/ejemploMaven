@@ -56,9 +56,10 @@ public class EditarActivos extends HttpServlet {
             String ultimo_mantenimiento = request.getParameter("ultimo_mantenimiento");
             String estado = request.getParameter("estado");
             String prestado = request.getParameter("prestado");
-            String categoria = request.getParameter("categoria");
+          
             //String calificacion = request.getParameter("calificacion");
             int calificacion = Integer.parseInt(request.getParameter("calificacion"));
+            String categoria = request.getParameter("categoria");
 
             request.setAttribute("id_activo", id_activo);
             request.setAttribute("tipo", tipo);
@@ -67,8 +68,8 @@ public class EditarActivos extends HttpServlet {
             request.setAttribute("ultimo_mantenimiento", ultimo_mantenimiento);
             request.setAttribute("estado", estado);
             request.setAttribute("prestado", prestado);
-            request.setAttribute("categoria", categoria);
             request.setAttribute("calificacion", calificacion);
+            request.setAttribute("categoria", categoria);
 
             request.getRequestDispatcher("EditarActivo.jsp").forward(request, response);
 

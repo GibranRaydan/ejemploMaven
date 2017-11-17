@@ -224,7 +224,7 @@ public class ActivoDAO {
             preparedStmt.setString(5, estado);
             preparedStmt.setString(6, prestado);
             preparedStmt.setInt(7, calificacion);
-              preparedStmt.setString(8, categoria);
+            preparedStmt.setString(8, categoria);
 
             if (preparedStmt.executeUpdate() > 0) {
                 result = true;
