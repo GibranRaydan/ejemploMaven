@@ -59,7 +59,7 @@ public class EditarActivos extends HttpServlet {
           
             //String calificacion = request.getParameter("calificacion");
             int calificacion = Integer.parseInt(request.getParameter("calificacion"));
-            //String categoria =  request.getParameter("categoria");
+            String categoria =  request.getParameter("categoria");
 
             request.setAttribute("id_activo", id_activo);
             request.setAttribute("tipo", tipo);
@@ -69,7 +69,7 @@ public class EditarActivos extends HttpServlet {
             request.setAttribute("estado", estado);
             request.setAttribute("prestado", prestado);
             request.setAttribute("calificacion", calificacion);
-            //request.setAttribute("categoria", categoria);
+            request.setAttribute("categoria", categoria);
 
             request.getRequestDispatcher("EditarActivo.jsp").forward(request, response);
 

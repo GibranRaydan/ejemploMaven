@@ -68,7 +68,7 @@
                             String estado = (String) request.getAttribute("estado");
                             String prestado = (String) request.getAttribute("prestado");
                             int calificacion = (Integer) request.getAttribute("calificacion");
-                            String categoria = (String) request.getAttribute(a.getNombre());
+                            String categoria = (String) request.getAttribute("categoria");
 
                         %>
                         <form class="form-inline" action="EditarActivos" method="POST">
@@ -111,7 +111,7 @@
                             </div>
                                      <div class="form-group">
                                 <label for="tipo">Categoria</label>
-                                <select class="form-control" name="categoria">
+                                <select class="form-control" name="categoria" value="<%=categoria%>">
                                      <%
                                         if (request.getAttribute("categoria") != null) {
                                             ArrayList<Categoria> array = (ArrayList<Categoria>) request.getAttribute("categoria");
