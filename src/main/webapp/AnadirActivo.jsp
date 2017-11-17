@@ -109,6 +109,9 @@
                                     %> 
                                 </select>
                             </div>
+                                <br>
+                                <br>
+                                
                             <div class="form-group">
                                 <label for="tipo">Calificación</label>
                                 <select class="form-control" name="calificacion">
