@@ -1,3 +1,5 @@
+<%@page import="Model.Categoria"%>
+<%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -91,6 +93,20 @@
                                 <select class="form-control" name="prestado">
                                     <option>True</option>
                                     <option>False</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tipo">Categoria</label>
+                                <select class="form-control" name="categoria">
+                                     <%
+                                        if (request.getAttribute("categoria") != null) {
+                                            ArrayList<Categoria> array = (ArrayList<Categoria>) request.getAttribute("categoria");
+                                            for (Categoria a : array) {
+                                    %> 
+                                    <option value="<%=a.getNombre()%>"><%=a.getNombre()%></option> 
+                                    <%      }
+                                        }
+                                    %> 
                                 </select>
                             </div>
                             <div class="form-group">
