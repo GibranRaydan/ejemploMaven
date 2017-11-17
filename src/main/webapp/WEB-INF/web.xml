@@ -102,7 +102,7 @@
     
     <servlet>
         <servlet-name>Categoriaa</servlet-name>
-        <servlet-class>Categoriaa</servlet-class>
+        <servlet-class>Controller.Categoriaa</servlet-class>
     </servlet>
         <servlet-mapping>
         <servlet-name>Categoriaa</servlet-name>
@@ -110,15 +110,7 @@
     </servlet-mapping>
     
     
-      <servlet>
-        <servlet-name>Header</servlet-name>
-        <servlet-class>Header</servlet-class>
-    </servlet>
-        <servlet-mapping>
-        <servlet-name>Header</servlet-name>
-        <url-pattern>/Header</url-pattern>
-    </servlet-mapping>
-    
+
     
     
     <servlet-mapping>
