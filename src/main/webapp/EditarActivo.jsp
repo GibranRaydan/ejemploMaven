@@ -104,6 +104,22 @@
                                     <option>False</option>
                                 </select>
                             </div>
+                                     <div class="form-group">
+                                <label for="tipo">Categoria</label>
+                                <select class="form-control" name="categoria">
+                                     <%
+                                        if (request.getAttribute("categoria") != null) {
+                                            ArrayList<Categoria> array = (ArrayList<Categoria>) request.getAttribute("categoria");
+                                            for (Categoria a : array) {
+                                    %> 
+                                    <option value="<%=a.getNombre()%>"><%=a.getNombre()%></option> 
+                                    <%      }
+                                        }
+                                    %> 
+                                </select>
+                            </div>
+                                <br>
+                                <br>
                             <div class="form-group">
                                 <label for="tipo">Calificación</label>
                                 <select class="form-control" name="calificacion" value="<%=calificacion%>">
